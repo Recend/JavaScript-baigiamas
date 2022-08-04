@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="main.css">
+    <title>Baigiamasis</title>
+</head>
+
+<body>
+    <header>
+        <div class="header">
+            <div class="burgeris">
+                <button id="buton" onclick="veikia()">☰</button>
+            </div>
+            <div id="left">
+                <ul class="nerodo">
+                    <li><a href="#uzd">Užduotys</a></li>
+                    <li><a href="#dez">Dėžė</a></li>
+                    <li><a href="#col">Spalvos</a></li>
+                    <li><a href="#len">Lentelė</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <main>
+        <h1 id="uzd">Baigiamasis darbas</h1>
+        <div class="task aukstis">
+            <h2 >Užduotys</h2>
+            <p>1. Paspaudus ant mygtuko, puslapyje esantis div atsiranda/pranyksta</p>
+            <p>2. Turit vieną div, su aukščiu,pločiu ir spalva bei 4 mygtukus, su kuriais galit valdyt sukurto div
+                savybes:
+                plotis, aukstis, centravimas ir pozicija</p>
+            <p>3. Burgeris ir šoninis Meniu - paspaudus ant burgerio gražiai išvažiuoja šoninis meniu.</p>
+            <p>4. Bent 4 div elementai, pradžioje visi juodos spalvos, paspaudus bent ant vieno iš jų, yra pakeičiamos
+                spalvos
+                visiems. Spalvos generuojamos random.</p>
+            <p>5. Formoje pildoma "vardas", "pavardė" ir "gimimo data". Duomneys kaupiami lentelėje. Stulpeliai: Eil.
+                Nr.,
+                Vardas, Pavardė, Amžius.</p>
+            <p id="dez"><i>Visos užduotys turi būti stilizuotos, kad nebūtų sumaišytos. Kiekviena turi turėti savo section,
+                    headingus ir
+                    pan.</i>
+            </p>
+        </div>
+
+        <div  class="task aukstis">
+            <h2>Dėžė</h2>
+            <button class="btn" onclick="showHide()">Show/Hide</button>
+            <div class="lygu">
+                <div class="show-hide"></div>
+            </div>
+            <button class="width" onclick="changeWidth()">Change Width</button>
+            <button class="height" onclick="changeHeight()">Change Height</button>
+            <button class="center" onclick="center()">Center</button>
+            <button class="position" onclick="position()">Position</button>
+        </div>
+        <div class="task aukstis pad" id="col">
+            <h2>Spalvų Generatorius</h2>
+            <div class="but">
+                <button class="change" onclick="changeColor(), addText()">Spausti čia</button>
+            </div>
+            <div class="box">
+                <div class="box1"></div>
+                <div class="box2"></div>
+                <div class="box3"></div>
+                <div class="box4"></div>
+            </div>
+        </div>
+        <div class="task aukstis pad" id="len">
+            <h2>Lenetelė</h2>
+            <form>
+                <div class="but">
+                    <label for="firstName">First Name:</label>
+                    <input type="text" name="firstName" id="firstName">
+                    <label for="lastName">Last Name:</label>
+                    <input type="text" name="lastName" id="lastName">
+                    <label for="date">Born date:</label>
+                    <input type="number" name="amzius" id="amzius">
+                </div>
+            </form>
+            <button class="sub" onclick="addToTable(), turnTableOn()">Add me</button>
+            <div class="vid">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Eil.nr</th>
+                            <th>Vardas</th>
+                            <th>Pavardė</th>
+                            <th>Amžius</th>
+                        </tr>
+                    </thead>
+                    <tbody class="bodi">
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+    <script src="script.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</body>
+
+</html>
