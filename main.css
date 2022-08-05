@@ -29,9 +29,23 @@ h2 {
  border-radius: 10px;
  position: relative;
 }
+.task1 {
+ height: 200px;
+ width: 80%;
+ margin: 0 auto;
+ background-color: bisque;
+ border: 1px solid black;
+ line-height: 1.5;
+ margin-top: 30px;
+ border-radius: 10px;
+ position: relative;
+}
 
 .aukstis {
  height: 100%;
+}
+.poz{
+ display: flex;
 }
 
 /* buttonai */
@@ -39,6 +53,7 @@ button {
  display: flex;
  justify-content: center;
  align-items: center;
+ cursor: pointer;
 }
 button:hover{
  background-color:lavenderblush;
@@ -51,6 +66,7 @@ button:hover{
  width: 70px;
  height: 30px;
  margin: 10px;
+ cursor: pointer;
 }
 
 .width {
@@ -59,6 +75,7 @@ button:hover{
  width: 70px;
  height: 50px;
  margin: 10px;
+ cursor: pointer;
 }
 
 .height {
@@ -67,6 +84,7 @@ button:hover{
  width: 70px;
  height: 50px;
  margin: 10px;
+ cursor: pointer;
 }
 
 .center {
@@ -75,6 +93,7 @@ button:hover{
  width: 70px;
  height: 50px;
  margin: 10px;
+ cursor: pointer;
 }
 
 .position {
@@ -83,6 +102,7 @@ button:hover{
  width: 70px;
  height: 50px;
  margin: 10px;
+ cursor: pointer;
 }
 
 /* buttonai */
@@ -109,11 +129,14 @@ button:hover{
  position: absolute;
  right: 0;
  top: 0;
+ z-index: 5;
 }
 
 .lygu {
+ width: 100%;
  display: flex;
  justify-content: center;
+ align-items: center;
 }
 
 a{
@@ -136,7 +159,7 @@ a{
  justify-content: space-around;
  position: fixed;
  right: 100%;
- transition: all 2s;
+ transition: all 1s;
  background: #95483f;
  background-image: linear-gradient(90deg, #000004, #160b39, #420a68, #6a176e, #932667, #ba3655, #dd513a, #f3761b, #fca50a, #f6d746, #f6d746);
  padding-top: 15px;
@@ -146,7 +169,7 @@ a{
  z-index: 1;
 }
 .rodo{
- transition: all 2s;
+ transition: all 1s;
  right: 50px;
  background: #95483f;
 background-image: linear-gradient(90deg, #000004, #160b39, #420a68, #6a176e, #932667, #ba3655, #dd513a, #f3761b, #fca50a, #f6d746, #f6d746);
@@ -155,7 +178,7 @@ background-image: linear-gradient(90deg, #000004, #160b39, #420a68, #6a176e, #93
  position: fixed;
  width: 100%;
  top: 0;
- z-index: 1;
+ z-index: 99;
  /* opacity: 0.7; */
 }
 .burgeris{
@@ -172,7 +195,9 @@ li{
 position: fixed;
 top: 0;
 }
-
+.padd{
+ padding: 20px;
+}
 
 /* burgeris */
 
@@ -201,6 +226,7 @@ a:hover{
  height: 200px;
  background-color: black;
  border-radius: 50%;
+ cursor: pointer;
 }
 .box2 {
  display: flex;
@@ -210,6 +236,7 @@ a:hover{
  height: 200px;
  background-color: black;
  border-radius: 50%;
+ cursor: pointer;
 }
 .box3 {
  display: flex;
@@ -219,6 +246,7 @@ a:hover{
  height: 200px;
  background-color: black;
  border-radius: 50%;
+ cursor: pointer;
 }
 .box4 {
  display: flex;
@@ -228,15 +256,18 @@ a:hover{
  height: 200px;
  background-color: black;
  border-radius: 50%;
+ cursor: pointer;
 }
 .box{
  display: flex;
  justify-content: space-around;
+ margin-top: 15px;
 }
 
 .but{
  display: flex;
  justify-content: center;
+ padding: 20px;
 }
 
 /* spalvos */
@@ -269,4 +300,44 @@ th{
 }
 tr:nth-child(even) {background: #CCC}
 tr:nth-child(odd) {background: #FFF}
+
+.butons{
+display: flex;
+justify-content: center;
+}
+.butonai{
+ width: 20%;
+ background-color: #4CAF50;
+ color: white;
+ padding: 10px 15px;
+ margin: 8px 5px;
+ border: none;
+ border-radius: 4px;
+ cursor: pointer;
+}
+
+.butonai:hover{
+ background-color: #4CAF50;
+}
 /* lentele */
+
+input[type=text], select {
+ width: 30%;
+ padding: 12px 20px;
+ margin: 8px 0;
+ display: inline-block;
+ border: 1px solid #ccc;
+ border-radius: 4px;
+ box-sizing: border-box;
+}
+
+input[type=number], select {
+ width: 30%;
+ padding: 12px 20px;
+ margin: 8px 0;
+ display: inline-block;
+ border: 1px solid #ccc;
+ border-radius: 4px;
+ box-sizing: border-box;
+}
+ 

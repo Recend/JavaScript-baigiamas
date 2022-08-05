@@ -1,7 +1,7 @@
 const box = document.querySelector('.show-hide') // selectinu box kuri noresiu rodyti
 //funkcija kuri ijungia arba isjungia deze
 function showHide() {
-    if (box.style.display === 'none') {
+    if (box.style.display == 'none') {
         box.style.display = 'block'
     } else {
         box.style.display = 'none';
@@ -29,7 +29,7 @@ function position() {
 const buton = document.querySelector('.nerodo')
 
 
-function veikia (){
+function veikia() {
     buton.classList.toggle('rodo')
 }
 
@@ -38,21 +38,15 @@ function veikia (){
 let boxes = document.querySelectorAll('.box > div')
 let colores;
 
-function changeColores(){
-    for(i = 0; i < boxes.length; i++){
+function changeColores() {
+    for (i = 0; i < boxes.length; i++) {
         colores = '#' + Math.random().toString(16).substr(-6)
         boxes[i].style.backgroundColor = colores;
         boxes[i].innerHTML = colores
     }
 }
 
-
-
-
-//rgb budas
-// function rand() {
-//     return Math.floor(Math.random() * 256)
-// };
+// rgb budas
 
 // const deze1 = document.querySelector('.box1')
 // const deze2 = document.querySelector('.box2')
@@ -67,7 +61,7 @@ function changeColores(){
 //     return `rgb(${rand()}, ${rand()}, ${rand()})`;
 // };
 
-// function changeColor() {
+// function changeColores() {
 //     deze1.style.backgroundColor = randomColor();
 //     deze2.style.backgroundColor = randomColor();
 //     deze3.style.backgroundColor = randomColor();
@@ -80,14 +74,15 @@ function changeColores(){
 //     deze3.innerHTML = randomColor()
 //     deze4.innerHTML = randomColor()
 // };
-///  lentele
+//  lentele
 
-const lentele =  document.querySelector('table');
-function turnTableOn(){
+const lentele = document.querySelector('table');
+
+function turnTableOn() {
     return lentele.classList.add('table1')
 }
 
-const info = document.querySelector('.sub');
+const info = document.querySelector('.butonai');
 const tekstas = document.querySelector('.bodi');
 
 function addToTable() {
@@ -99,8 +94,7 @@ function addToTable() {
     cell1.innerHTML = buttonClick();
     cell2.innerHTML = addName();
     cell3.innerHTML = addLastName();
-
-    const ageVal = document.querySelector('#amzius').value;
+    let ageVal = document.querySelector('#amzius').value;
     let output = 2022 - Number.parseInt(ageVal);
     cell4.innerHTML = output;
 };
@@ -108,7 +102,7 @@ function addToTable() {
 let i = 0;
 
 function buttonClick() {
-    info.value = i++;
+    i++;
     return i
 };
 
@@ -123,4 +117,28 @@ function addLastName() {
     return lastName.value
 };
 
-//apskaiciuoti gimimo data
+// istrinti lenteles eilute
+
+function deleteEil() {
+    let table = document.querySelector('#teibl');
+    let rowCount = table.rows.length;
+    table.deleteRow(rowCount - 1);
+    i--
+}
+
+//istrinti lentele
+
+function deleteTable() {
+    document.querySelector('.bodi').innerHTML = '';
+    document.querySelector('table').classList.remove('table1');
+    i = 0;
+
+}
+
+function resetCount() {
+    i = 0
+    document.querySelector('#firstName').value = ''
+    document.querySelector('#lastName').value = ''
+    document.querySelector('#amzius').value = ''
+}
+
