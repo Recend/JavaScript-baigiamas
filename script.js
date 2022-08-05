@@ -34,33 +34,52 @@ function veikia (){
 }
 
 // spalvos
+//#FFFFFF budas
+let boxes = document.querySelectorAll('.box > div')
+let colores;
 
-const deze1 = document.querySelector('.box1')
-const deze2 = document.querySelector('.box2')
-const deze3 = document.querySelector('.box3')
-const deze4 = document.querySelector('.box4')
-
-function rand() {
-    return Math.floor(Math.random() * 256)
-};
-
-function randomColor() {
-    return `rgb(${rand()}, ${rand()}, ${rand()})`;
-};
-
-function changeColor() {
-    deze1.style.backgroundColor = randomColor();
-    deze2.style.backgroundColor = randomColor();
-    deze3.style.backgroundColor = randomColor();
-    deze4.style.backgroundColor = randomColor();
+function changeColores(){
+    for(i = 0; i < boxes.length; i++){
+        colores = '#' + Math.random().toString(16).substr(-6)
+        boxes[i].style.backgroundColor = colores;
+        boxes[i].innerHTML = colores
+    }
 }
 
-function addText() {
-    deze1.innerHTML = randomColor()
-    deze2.innerHTML = randomColor()
-    deze3.innerHTML = randomColor()
-    deze4.innerHTML = randomColor()
-};
+
+
+
+//rgb budas
+// function rand() {
+//     return Math.floor(Math.random() * 256)
+// };
+
+// const deze1 = document.querySelector('.box1')
+// const deze2 = document.querySelector('.box2')
+// const deze3 = document.querySelector('.box3')
+// const deze4 = document.querySelector('.box4')
+
+// function rand() {
+//     return Math.floor(Math.random() * 256)
+// };
+
+// function randomColor() {
+//     return `rgb(${rand()}, ${rand()}, ${rand()})`;
+// };
+
+// function changeColor() {
+//     deze1.style.backgroundColor = randomColor();
+//     deze2.style.backgroundColor = randomColor();
+//     deze3.style.backgroundColor = randomColor();
+//     deze4.style.backgroundColor = randomColor();
+// }
+
+// function addText() {
+//     deze1.innerHTML = randomColor()
+//     deze2.innerHTML = randomColor()
+//     deze3.innerHTML = randomColor()
+//     deze4.innerHTML = randomColor()
+// };
 ///  lentele
 
 const lentele =  document.querySelector('table');
@@ -105,5 +124,3 @@ function addLastName() {
 };
 
 //apskaiciuoti gimimo data
-
-
