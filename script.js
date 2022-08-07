@@ -135,6 +135,7 @@ function deleteTable() {
 
 }
 
+//isvalyti input
 function resetCount() {
     i = 0
     document.querySelector('#firstName').value = ''

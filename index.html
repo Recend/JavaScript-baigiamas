@@ -9,6 +9,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="main.css">
     <title>Baigiamasis</title>
 </head>
@@ -30,7 +33,7 @@
         </div>
     </header>
     <main>
-        <h1 id="uzd">Baigiamasis darbas</h1>
+        <h1 id="uzd">Baigiamasis FE</h1>
         <div class="task aukstis padd">
             <h2>Užduotys</h2>
             <p>1. Paspaudus ant mygtuko, puslapyje esantis div atsiranda/pranyksta</p>
@@ -54,7 +57,6 @@
         <div class="task1 aukstis padd">
             <h2>Dėžė</h2>
             <div>
-                
                 <div class="poz">
                     <button class="btn" onclick="showHide()">Show/Hide</button>
                     <button class="width" onclick="changeWidth()">Change Width</button>
@@ -62,10 +64,11 @@
                     <button class="center" onclick="center()">Center</button>
                     <button class="position" onclick="position()">Position</button>
                 </div>
-                <div class = 'lygu aukstis2'>
-                    <div class="show-hide" style="display:none"></div>
-                </div>
             </div>
+            <div class="task2 ausktis lygu">
+                <div class="show-hide" style="display:none"></div>
+            </div>
+
         </div>
         <div class="task aukstis pad" id="col">
             <h2>Spalvų Generatorius (Double click)</h2>
@@ -90,12 +93,12 @@
                 </div>
             </form>
             <div class="butons">
-                <button class='butonai' onclick="addToTable(), turnTableOn()">Prideti eilute</button>
-                <button class='butonai' onclick="deleteEil()">Istrinti eilute</button>
-                <button id="resetCount" class='butonai' onclick="deleteTable(), resetCount()">Istrinti lentele</button>
+                <button class='butonai' onclick="addToTable(), turnTableOn()">Pridėti eilutę</button>
+                <button class='butonai' onclick="deleteEil()">Ištrinti eilutę</button>
+                <button id="resetCount" class='butonai' onclick="deleteTable(), resetCount()">Ištrinti lentelę</button>
             </div>
             <div class="vid">
-                <table id="teibl">
+                <table class="teibl">
                     <thead>
                         <tr>
                             <th>Eil.nr</th>
@@ -104,7 +107,7 @@
                             <th>Amžius</th>
                         </tr>
                     </thead>
-                    <tbody id="tbody" class="bodi">
+                    <tbody class="bodi">
 
                     </tbody>
                 </table>

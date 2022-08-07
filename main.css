@@ -6,11 +6,11 @@
 
 body {
  background-color: #11749e;
+ font-family: 'Lato', sans-serif;
 }
 
 h1 {
  margin-top: 60px;
- font-family: 'Cinzel', serif;
  text-align: center;
 }
 
@@ -28,6 +28,9 @@ h2 {
  margin-top: 30px;
  border-radius: 10px;
  position: relative;
+ box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+-webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
 }
 .task1 {
  height: 200px;
@@ -39,6 +42,18 @@ h2 {
  margin-top: 30px;
  border-radius: 10px;
  position: relative;
+ box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+-webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+}
+.task2 {
+ height: 100%;
+ width: 100%;
+ margin: 0 auto;
+ background-color: bisque;
+ line-height: 1.5;
+ border-radius: 10px;
+ position: relative;
 }
 
 .aukstis {
@@ -46,6 +61,7 @@ h2 {
 }
 .poz{
  display: flex;
+ justify-content: space-around;
 }
 
 /* buttonai */
@@ -64,7 +80,7 @@ button:hover{
  background-color: white;
  color: black;
  width: 70px;
- height: 30px;
+ height: 50px;
  margin: 10px;
  cursor: pointer;
 }
@@ -112,11 +128,13 @@ button:hover{
  background-color: darkmagenta;
  border-radius: 10px;
  display: none;
+ transition: all 0.8s;
 }
 
 .show-hide1 {
  width: 500px;
  background-color: darkmagenta;
+
 }
 
 .show-hide2 {
@@ -127,8 +145,8 @@ button:hover{
 .show-hide3 {
  background-color: darkmagenta;
  position: absolute;
- right: 0;
- top: 0;
+ right: -20px;
+ bottom: -152px;
  z-index: 5;
 }
 
@@ -298,8 +316,6 @@ th{
  height: 30px;
  margin: 10px;
 }
-tr:nth-child(even) {background: #CCC}
-tr:nth-child(odd) {background: #FFF}
 
 .butons{
 display: flex;
@@ -341,3 +357,21 @@ input[type=number], select {
  box-sizing: border-box;
 }
  
+table.teibl {
+ font-family: "Comic Sans MS", cursive, sans-serif;
+ border: 2px solid #4F7849;
+ background-color: #EEEEEE;
+ border-collapse: collapse;
+}
+table.teibl td, table.teibl th {
+ border: 1px solid #4F7849;
+ padding: 3px 2px;
+}
+table.teibl tbody td {
+ font-size: 19px;
+ font-weight: bold;
+ color: #4F7849;
+}
+table.teibl tr:nth-child(even) {
+ background: #CEE0CC;
+}
