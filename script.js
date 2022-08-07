@@ -120,7 +120,7 @@ function addLastName() {
 // istrinti lenteles eilute
 
 function deleteEil() {
-    let table = document.querySelector('#teibl');
+    let table = document.querySelector('.teibl');
     let rowCount = table.rows.length;
     table.deleteRow(rowCount - 1);
     i--
