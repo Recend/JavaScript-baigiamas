@@ -95,7 +95,7 @@ function addToTable() {
     cell2.innerHTML = addName();
     cell3.innerHTML = addLastName();
     let ageVal = document.querySelector('#amzius').value;
-    let output = 2022 - Number.parseInt(ageVal);
+    let output = new Date().getFullYear() - Number.parseInt(ageVal);
     cell4.innerHTML = output;
 };
 
@@ -143,3 +143,10 @@ function resetCount() {
     document.querySelector('#amzius').value = ''
 }
 
+// prevent eiluciu trinima
+
+function preventRowDelete(){
+    if(tekstas == displayBlanksAs()){
+        return false
+    }
+}
